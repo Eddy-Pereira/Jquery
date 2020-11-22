@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+        
+            .container {
+                width: 720px;
+                margin: 0 auto;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-gap: 10px;
+            }
+
+            article {
+                border: 1px dashed skyblue;
+            }
+        
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+
+            <!-- raccourcis section>article*5>h2.{titre$}+p $: numérote -->
+            <section>
+                <article>
+                    <h2 class="html">titre1</h2>
+                    <p></p>
+                </article>
+                <article>
+                    <h2 class="before">titre2</h2>
+                    <p></p>
+                </article>
+                <article>
+                    <h2 class="after">titre3</h2>
+                    <p></p>
+                </article>
+                <article>
+                    <h2 class="append">titre4</h2>
+                    <p></p>
+                </article>
+                <article>
+                    <h2 class="prepend">titre5</h2>
+                    <p></p>
+                </article>
+            </section>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+        <script>
+            // modifier le titre1
+            $(".html").html("titre modifié")
+            // la méthode html va modifier l'intégralité du contenu de l'élément html sélectionné
+
+            //  il existe d'autres méthodes pour modifier le contenu des balises html
+
+            $(".before").before("avant");
+            // va permettre d'ajouter du html Avant la balise séléctionnée
+
+            $(".after").after("après");
+            //  va permettre d'ajouter du html APRES la balise séléctionnée
+
+            $(".append").append(" suffixe")
+            //  va permettre d'ajouter du html à la FIN de la balise séléctionnée 
+            //  ne pas hésiter à ajouter un espace au début pour que le mot soit bien spéré le suffixe   concerné
+
+            $(".prepend").prepend("prefix ");
+            // va permettre d'ajouter du html au DEBUT de la balise séléctionnée
+            // ne pas hésiter à ajouter un espace à la fin pour que le mot soit bien séparé le suffixe du mot concerné
+            
+
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+                .burger {
+                    width: 60px;
+                    border: 1px solid yellowgreen;
+                    padding: 4px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+    
+                .burger span {
+                    height: 8px;
+                    margin: 2px 0;
+                    width: 100%;
+                    background-color: burlywood;
+                    display: inline-block;
+                }
+    
+                /*  média query équivalent de if pour javascript */
+
+     
+                .burger {
+                    display: none;
+                }
+    
+                @media screen and (max-width:720px) {
+    
+                    .burger {
+                        display: block;
+                    }
+    
+                } 
+             
+            </style>
+        </head>
+        <body>
+    
+            <div class="container">
+                <header>
+                    <!-- bouton burger barre de menu -->
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <ul>
+                        <li><a href="#">Lorem.</a></li>
+                        <li><a href="#">Fugiat.</a></li>
+                        <li><a href="#">Optio?</a></li>
+                        <li><a href="#">Minus.</a></li>
+                        <li><a href="#">Facere.</a></li>
+                    </ul>
+                </header>
+    
+            </div>
+            
+        </body>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+        
+            
+            // $(".burger").click(function() {
+            //     $("ul").toggle("");
+            // })
+                
+            $("ul").hide();
+
+
+            $(".burger").click(function(){
+                $("ul").slideToggle("");
+            });
+         
+
+
+        </script>
+</html>

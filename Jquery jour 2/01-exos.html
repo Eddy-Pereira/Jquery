@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jquery Jour 2</title>
+        <style>
+        
+        td, th {
+            border: 2px dashed gold;
+        }
+
+   
+        </style>
+    </head>
+    <body>
+        <!-- table>tr*5>td*3>lorem2 raccourcis-->
+            <table>
+                <tr>
+                    <td>Lorem ipsum.</td>
+                    <td>Nisi, obcaecati!</td>
+                    <td>Repudiandae, possimus!</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum.</td>
+                    <td>Reprehenderit, ratione.</td>
+                    <td>Ullam, temporibus!</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum.</td>
+                    <td>Temporibus, quae.</td>
+                    <td>Beatae, quam?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum.</td>
+                    <td>Possimus, eum.</td>
+                    <td>Sequi, tempora?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum.</td>
+                    <td>Modi, a!</td>
+                    <td>Nihil, incidunt.</td>
+                </tr>
+            </table>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script>
+                $("tr")
+                    .eq(1)
+                    .css("background", "brown")
+
+                
+                $("td")
+                    .eq(7)
+                    .css("background", "yellow")
+
+
+                $("tr")
+                    .eq(4)
+                    .css("background", "skyblue")
+
+                    // $("tr:nth-child(3) td:nth-child(2)".css("background", "pink")
+                    
+
+            </script>
+    </body>
+</html>
+
+
+<!-- ol>li*3 -->
+
+<!-- table>(tr>th*2)+tr>td*2
+    raccourcis
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table> -->

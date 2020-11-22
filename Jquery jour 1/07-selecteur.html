@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Second Exos of jquery</title>
+        <style>
+        
+            .container {
+                margin: 0 auto;
+                width: 520px;
+            }
+        
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <header>
+                <img src="https://via.placeholder.com/120x80" alt="">
+            </header>
+
+            <main>
+
+                <p class="first"></p>
+
+                <p class="second"></p>
+
+            </main>
+
+
+            <!-- raccourcis section#news>p*3 -->
+            <section id="news">
+                <p></p>
+                <p></p>
+                <p></p>
+            </section>
+
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+        <script>
+    
+    
+            // $("p").html("Wassup")
+
+            // utiliser un sélecteur css class
+            $(".first").html("bankai: Ruijin Jaka")
+
+            $(".second").html("Bankai : Zabimaru ")
+
+    
+
+            // étant donné qu'il y a 3 paragraphes dans la balise qui a l'id news je vais avoir 3 fois le mot écrit news
+
+            // $("#news p") contient un tableau de 3 paragaphes
+            $("#news p").first().html("news")
+
+            // équivaut à écrire
+            // $("#news p").eq(0).html("news")
+            $("#news p").eq(1).html(" autre news")
+
+            $("#news p").last().html(" last news")
+            // équivaut à écrire $("news p").eq(2).html("news")
+
+
+            // Javascript var p = document.querySelectorAll("p")
+
+            // for(var i = 0; i < p.length; i++){
+
+            //     p[i].innerHTML = "un paragraphe"
+            // }
+
+        </script>
+        
+    </body>
+</html>

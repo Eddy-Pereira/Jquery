@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chainage</title>
+
+        <style>
+        
+        
+        .container {
+            margin: 0 auto;
+            width: 720px;
+        }
+
+        
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <section>
+                <h1></h1>
+                <p></p>
+                <p></p>
+                <p></p>
+
+            </section>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+        
+        // chainage
+        // javascript natif
+
+            var p = document.getElementsByTagName("p")[0];
+
+            // modifier le contenu du paragraphe
+
+            p.innerHTML = "texte";
+            p.style["font-size"] = "30px";
+            p.style["color"] = "red";
+            //  en javascript natif j'ai besoin d'écrire 4 instruction
+
+            // en jquery, nous allons pouvoir réaliser le même travail en une seule instruction = chainage d'instruction
+
+            $("p")
+                .first()
+                .html("texte avec du jquery")
+                .css("font-size", 30)
+                .css("color", "red");
+
+                // chainage gros gain de productivité car pas besoin de créer de nombreuses instructions lorsque l'on veut réaliser plusieurs modif du html sur un élément sélectionné
+
+                // pour css("font-size", 30) c'est px par défaut
+
+                //  variable simple une variable qui contient une valeur 
+                var a = "Victor"; // a est un string
+                var b = 12;  // b est un number
+                
+                // variable complexe : variable qui contiennent plusieurs variable
+
+                var jour = ["lundi", "mardi", "mercredi"]
+
+                // objet 
+                var styleParagraphe  = {
+                    "font-size" : 30,
+                    "color" : "blue",
+                    "text-transform" : "uppercase",
+                    "font-family" : "Arial"
+                }
+
+                $("p")
+                    .last()
+                    .css(styleParagraphe)
+                    .html("Last Element")
+
+                    // Je peux utiliser css avec un .css(objet) ce qui va m'éviter de répéter .css() autant de fois que j'ai de propriétés à appliquer*
+
+
+
+
+
+                // Exos
+                $("h1")
+                    .html("DOPEYSAF")
+                    .css("font-weight", "bold")
+                    .css("text-align", "center")
+                    .css("font-size", 25)
+                    
+
+
+
+
+
+
+
+
+                    
+                    // autre méthode ci-dessous
+                    // var grandTitreV1 = {
+                    //     "color" : "red",
+                    //     "text-align" : "center",
+                    //     "font-weight" : "bold",
+                    //     "font-size" : 25
+                    // };
+                    
+                    // var grandTitreV2 = {
+                    //     "color" : "red",
+                    //     textAlign : "center",
+                    //     fontWeight : "bold",
+                    //     fontSize : 25
+                    // };   //utilisation du camelCase
+
+        </script>
+        
+    </body>
+</html>

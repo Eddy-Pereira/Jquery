@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exos third selecteur</title>
+
+        <style>
+        
+            .container {
+                margin: 0 auto;
+                width: 720px;
+             
+            }
+            
+            section {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 20px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        
+
+        <div class="container">
+                <section>
+
+
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+
+                    <ol class="jour">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+
+
+                    <ol class="annee">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+
+
+                </section>
+
+
+
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+        
+            $("ul li").first().html("jquery")
+            $("ul li").eq(1).html("Boostrap")
+            $(".jour li").html("02/12/2019")
+            $(".annee li").first().html("bonjour")
+            $(".annee li").last().html("final")
+
+        
+        
+        </script>
+    </body>
+</html>

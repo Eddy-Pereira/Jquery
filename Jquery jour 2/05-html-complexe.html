@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .container {
+                margin: 0 auto;
+                width: 720px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap:  10px;
+            }
+
+            img  {
+                width: 100%;
+            }
+        
+        
+        
+        </style>
+
+    </head>
+    <body>
+            <div class="container"></div>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script>
+
+
+
+                // json tableau qui contient des objets
+                var baseDeDonnee = [
+                    {
+                        titre : "article 1",
+                        text : "premier article"
+                    },
+
+                    {
+                        titre: "Decouverte bootstrap",
+                        text: "deuxième article"
+                    },
+
+                    {
+                        titre: "article 3",
+                        text: "troisième article"
+                    },
+
+                    
+                    {
+                        titre: "article 4",
+                        text: "quatrième article"
+                    },
+            
+            
+                ];
+
+         
+                // concaténation
+                var html = " ";
+
+
+                // A + B = AB
+                for(let i = 0; i < baseDeDonnee.length; i++){
+                    var article = `<article>
+                        <img src="https://via.placeholder.com/420X120&text=${i}" alt="">
+                        <hr>
+                        <h2> ${baseDeDonnee[i].titre}</h2>
+                        <p>${baseDeDonnee[i].texte}</p>
+                    </article>`;
+
+                        html = html + article;
+                }
+                console.log(html)
+
+                $(".container").html(html)
+
+            </script>
+       
+    </body>
+</html>

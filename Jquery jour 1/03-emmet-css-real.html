@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+        
+            .container {
+                /* m0-a */
+                margin: 0 auto;
+            
+                /* w900 */
+                width: 900px;
+            }
+
+            main {
+                display: grid;  /*  nouvelle règle css3  */
+                /*appliquer aux enfants directs de la balise main (c'est les 4 paragraphes= un comportement de damier) */
+
+                grid-template-columns: repeat(4,1fr);
+                /* definir combien de colonnes a le damier : ici 4 colonnes */
+
+                grid-gap: 10px;
+                /* definir l'espace entre les colonnes gap 
+                 unité dédiée pour le display grid, ne pas l'utiliser dans un autre contexte
+                fr = fraction
+                fr unité qui va regarder la taille du parent 
+                main ?? = .container = 900px
+                somme de tous les gaps = 10 * 3 = 30
+                900 - 30 = 870 / 4 = 217.5px
+                
+
+                différence entre le fr et %
+                le % la largeur du parent appliquer directement le % sans prendre en compte le gap
+                */
+            }
+        
+
+        </style>
+        <title>Jquery</title>
+    </head>
+    <body>
+            <!-- first design: div class container / la balise va contenir l'ensemble des balises html -->
+
+            <!-- wrapper: emballage / div.container -->
+
+            <div class="container">
+                
+                <!-- header -->
+                <header>
+                    <img src="https://via.placeholder.com/80" alt="">
+                </header>
+
+
+                <!-- main -->
+                <main>
+                    <!-- p*4>lorem10 -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, officiis?</p>
+                    <p>Similique iure sint accusamus magni nisi saepe eligendi accusantium delectus!</p>
+                    <p>Vitae voluptas sint rem, sequi laborum quaerat esse voluptate alias!</p>
+                    <p>Fuga iste velit natus commodi dolor numquam unde vitae et.</p>
+                </main>
+            </div>
+    </body>
+</html>

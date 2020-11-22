@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        
+            .container {
+                margin: 0 auto;
+                width: 720px;
+            }
+
+
+            
+            /*  mettre les articles les uns à côté de l'autre pour faire ça j'ai utilisé la balise html qio est le parent direct des balises article: section */
+            section {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 20px;
+            }
+            
+            td {
+                border: 2px dotted    skyblue;
+            }
+
+
+            /* pour coller les cellules les uns aux autres je peux utiliser le display grid sur le parent direct des cellules */
+            tr {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+        
+        
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <header>
+                <img src="https://via.placeholder.com/100x50?text=pomme"></img>
+            </header>
+
+            <section>
+                <article>
+                    <h2>Lorem, ipsum dolor.</h2>
+                        <table>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corporis.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corporis.</td>
+                            </tr>
+                            <tr>
+                        
+                                <td>     Possimus, eveniet rem. Voluptas inventore veritatis qui blanditiis? Nulla, voluptate?</td>
+                                <td> Possimus, eveniet rem. Voluptas inventore veritatis qui blanditiis? Nulla, voluptate?</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Optio dicta impedit facilis sapiente minima ad ipsam saepe quas!</td>
+                                <td>Optio dicta impedit facilis sapiente minima ad ipsam saepe quas!</td>
+                            </tr>
+                    </table>
+                </article>
+
+                <article>
+                    <h2>Lorem, ipsum dolor.</h2>
+                        <button class="btn1">Afficher</button>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sed obcaecati suscipit aspernatur velit doloribus ea rerum, veritatis modi saepe nostrum, quos expedita eos temporibus at sit placeat. Repellendus, unde.</p>
+                </article>
+            </section>
+
+
+
+
+
+        </div>
+        
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    
+        // première réponse
+        // $("td")
+        // .eq(0)
+        // .css("background", "green");
+
+        // $("td")
+        // .eq(2)
+        // .css("background", "green");
+
+        // $("td")
+        // .eq(4)
+        // .css("background", "green");
+
+
+        // seconde réponse premier enfant de chaque td
+        $("td:first-child").css("background", "green");
+
+        $(".btn1").click(function(){
+             $("p").toggle("");         
+        })
+
+        // chainage
+        $("td")
+        
+
+
+        // Animation / évènement
+
+        //  .hide() // juste masquer
+        // .show() // juste afficher
+        //  toggle // afficher / masquer
+    
+    
+    
+    
+    </script>
+</html>

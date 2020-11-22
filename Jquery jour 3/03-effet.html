@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        
+            .container {
+                width: 720px;
+                margin: 0 auto;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 10px;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <!-- section>article*3>h2+button.btn$+p.p$ -->
+            <section>
+                <article>
+                    <h3></h3>
+                    <button class="btn1">toggle</button>
+                    <p class="p1">premier paragraphe</p>
+                </article>
+                <article>
+                    <h3></h3>
+                    <button class="btn2">slideToggle</button>
+                    <p class="p2">deuxième paragraphe</p>
+                </article>
+                <article>
+                    <h3></h3>
+                    <button class="btn3">fadeToggle</button>
+                    <p class="p3">dernier paragraphe</p>
+                </article>
+            </section>
+
+
+
+
+
+        </div>
+
+
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        //  ici l'effet pour le premier article
+
+        $(".btn1").on("click", function(){
+            $(".p1").toggle();
+        });
+
+        $(".btn2").on("click",function(){
+            $(".p2").slideToggle("");
+        });
+
+        $(".btn3").on("click",function(){
+            $(".p3").fadeToggle(2500,"swing",function(){
+                $(".p2").slideToggle(2500,"swing",function(){
+                    $(".p1").slideToggle();
+                });
+                // 2000ms millisecondes = 2secondes
+            });
+        });
+    
+    </script>
+
+
+    <!-- 
+        .slideToggle() = 
+        .fadeToggle()=
+
+        .toggle() afficher ou masquer instantanément
+        .slideToggle() afficher ou masquer avec un effet de glissé
+        .fadeToggle() afficher ou masquer avec un effet d'opacité
+
+     -->
+</html>

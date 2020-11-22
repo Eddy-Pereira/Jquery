@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    </head>
+
+    <style>
+    
+        .container {
+            margin: 50px auto;
+            width: 720px;
+
+        }
+
+        tr, td {
+            border: 2px dashed skyblue;
+            padding: 40px;
+        }
+/* 
+        tr {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        td {
+            border: 1px solid red;
+        } */
+    
+    
+    </style>
+    <body>
+        <div class="container">
+
+            <table>
+                <!-- 5 lignes = tr 3 colomnes =td -->
+                <tr>
+                    <td class="rock">Lorem, ipsum dolor.</td>
+                    <td>Eos, doloribus ab.</td>
+                    <td>Consequuntur, enim optio.</td>
+                </tr>
+                <tr>
+                    <td class="rock">Et, eligendi expedita.</td>
+                    <td>Et, facere quos.</td>
+                    <td>Ex, illo distinctio.</td>
+                </tr>
+                <tr>
+                    <td class="rock">Dolorum, voluptatibus dolor.</td>
+                    <td>Debitis, ducimus ipsum!</td>
+                    <td>Totam, laudantium cupiditate?</td>
+                </tr>
+                <tr>
+                    <td class="rock">Dolorum, voluptatibus dolor.</td>
+                    <td>Debitis, ducimus ipsum!</td>
+                    <td>Totam, laudantium cupiditate?</td>
+                </tr>
+                <tr>
+                    <td class="rock">Dolorum, voluptatibus dolor.</td>
+                    <td>Debitis, ducimus ipsum!</td>
+                    <td class="youtube">Totam, laudantium cupiditate?</td>
+                </tr>
+            </table>
+
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            //  $(".rock")
+            //     .prepend("<i class='icon-rocket'></i>")
+            //     // intérieur avant
+
+            // $(".youtube")
+            //     .append(" <i class='icon-youtube'></i>")
+            //     // intérieur après
+
+
+            // premier enfants de chaque td
+            $("td:first-child")
+                    .prepend(" <i class='icon-dropbox'></i>")
+
+            $("td")
+                    .eq(14)
+                    .append(" <i class='icon-youtube'></i>")
+
+
+            // const tab = [0,3,6,9,12]
+            // // for(let i = 0; i < tab.length; i++){
+            // //     $("td").eq(tab[i]).prepend("<i class='icon-youtube'></i>");
+            // // }
+
+
+
+
+            // // //  ajouter lpour la dernière cellule du tableau
+            // // $("td").last();append("<i class='icon-youtube'></i>")
+
+        </script>
+    </body>
+</html>

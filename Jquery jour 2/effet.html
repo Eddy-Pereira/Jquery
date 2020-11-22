@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <!-- p.premier>lorem10 -->
+            <button class="action1">afficher</button>
+                <p class="premier">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, 
+                nihil!</p>
+
+            <button class="action2">masquer</button>
+                <p class="deuxieme">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, 
+                nihil!</p>
+                <hr>
+            <button class="action3">masquer</button>
+                <p class="troisieme">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, 
+                nihil!</p>
+            
+
+        </div>
+ 
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            // .hide() = masquer en anglais
+            $(".premier").hide();
+
+
+            //  lorsque je vais cliquer sur le bouto, alors je vais afficher le paragraphe(p) avec la classe premier
+
+            $(".action1").click(function(){
+                $(".premier").show();
+            })
+
+            // pour le deuxième boutton
+
+            $(".action2").click( function(){
+                $(".deuxieme").hide();
+            })
+
+
+            $(".action3").click( function(){
+                $(".troisieme").toggle();
+                // affiche et masque en illimité
+            })
+
+
+
+            
+            // syntaxe 3
+            // $("button").on("click", function(){
+            //     $(".premier").show();
+            // })
+
+
+        </script>
+
+    </body>
+</html>

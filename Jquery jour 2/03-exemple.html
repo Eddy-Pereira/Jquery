@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <style>
+        
+            .container {
+                width: 720px;
+                margin: 0 auto;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 10px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .icon-rocket {
+                font-size: 10px;
+                color: red;
+            }
+        
+        </style>
+    
+    </head>
+    <body>
+        
+        <div class="container">
+
+            <!-- section>article*10>img[src="https://via.placeholder.com/150"]+p>lorem10 -->
+
+
+
+            <section>
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p><i class="icon-github-alt"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, repudiandae.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p><i class="icon-weibo"></i>Molestias, fugit earum magni repellat similique vel tempore. Necessitatibus, odit.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Sint assumenda esse repellendus dolore architecto quidem, nostrum velit sequi.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Dolore culpa fugiat, neque excepturi aliquam distinctio consequatur voluptas illum.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Numquam, labore? Repellat saepe eos iure excepturi accusantium doloremque nam.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Accusamus nulla consectetur animi incidunt magnam dolor libero doloribus at!</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Sequi incidunt vel eos vero nihil pariatur nobis repudiandae et?</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Vitae, ducimus iure laudantium nesciunt natus maiores illo eius voluptatum.</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>Cum, odio quisquam harum dignissimos officia suscipit non ex excepturi?</p>
+                </article>
+
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <p>In repellendus excepturi ipsum minus quibusdam repellat illo nihil perferendis!</p>
+                </article>
+
+            </section>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+        
+            $("img").after("<hr>");
+            // à l'intérieur de after ("écrire une balise")
+
+
+            $("p").append(" <a href='#' target='_blank'> lire la suite ...</a>")
+
+
+            // $("p").after("<div><i class='icon-rocket'></i></div>")
+
+            $("p").append(" <i class='icon-rocket'></i>")
+
+
+        
+        </script>
+
+
+    </body>
+</html>

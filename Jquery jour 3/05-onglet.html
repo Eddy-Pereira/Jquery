@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+        
+            .container {
+                width: 720px;
+                margin: 0 auto;
+            }
+            
+            section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px
+            }
+
+            .body p {
+                padding: 10px;
+                border: 1px solid skyblue;
+                border-radius: 5px;
+                box-shadow:  2px 2px 2px yellowgreen;
+            }
+        
+        
+        
+        </style>
+
+
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <div class="onglet">
+                    <div class="head">
+                        <button class="btn" data-index="0"> Accueil</button>
+                        <button class="btn" data-index="1">Blog</button>
+                        <button class="btn" data-index="2">Contact</button>
+                    </div>
+                    <div class="body">
+                        <p>Page d'accueil</p>
+                        <p>Page de Blog</p>
+                        <p>Page de Contact</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+        
+            // masquer tous les paragraphes sauf le premier position 0
+            
+
+            $("p").hide().eq(0).show();
+
+            $(".btn").on("click", function(){
+                var index = $(this).data("index");
+                // 
+                $("p").hide().eq(index).show();
+            })
+
+
+        </script>
+
+    </body>
+</html>

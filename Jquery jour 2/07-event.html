@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+
+            .container {
+                margin: 20px auto;
+                width: 720px;
+            }
+        
+            section  {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+        
+        
+        </style>
+    </head>
+    <body>
+
+        <section class="container">
+            <articles>
+                <button class="btn1">Button-1</button>
+                <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum quod architecto, fugiat saepe facilis pariatur ab dolorem quae minus nam. Vel doloribus quam aliquam numquam. Expedita dicta ducimus vitae!</p>
+            </articles>
+            <articles>
+                <button class="btn2">Button-2</button>
+                <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate sapiente dicta sit adipisci, quae labore doloribus alias voluptatum ipsam esse vitae omnis nesciunt laboriosam quasi voluptate magni eius incidunt.</p>
+            </articles>
+            <articles>
+                <button class="btn3">Button-3</button>
+                <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatibus totam labore. Incidunt, numquam. Veritatis iste tempora nobis eos quam illum officiis illo, tempore, rem commodi, eaque accusamus hic deleniti.</p>
+            </articles>
+        </section>
+        
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    
+        $(".p1").hide();
+
+        
+        $(".btn1").click(function(){
+                $(".p1").show();
+            })
+
+
+        $(".btn2").click( function(){
+            $(".p2").toggle();
+            // affiche et masque en illimité
+        })
+
+
+        $(".btn3").click(function(){
+
+            $(".p3").css("color", "red")
+                    .css("font-size", "24px")
+        })
+
+    
+    </script>
+
+</html>
